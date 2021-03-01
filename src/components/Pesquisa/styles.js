@@ -49,5 +49,9 @@ export const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
+  menu: {
+    display: "flex",
+    alignItems: "center",
+  },
 }));
 export default useStyles;

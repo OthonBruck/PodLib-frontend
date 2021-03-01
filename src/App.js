@@ -1,10 +1,15 @@
 import React from "react";
-import Home from "./pages/Home/index";
+import Drawer from "./components/Drawer/index";
+import Pesquisa from "./components/Pesquisa";
+import PodcastCard from "./components/PodcastCard/index";
+import PodcastWrapper from "./components/PodcastWrapper/index";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Drawer>
+        <PodcastWrapper lista={null} />
+      </Drawer>
     </div>
   );
 }
