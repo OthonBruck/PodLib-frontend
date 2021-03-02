@@ -14,6 +14,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import MENU from "../../utils/constants/menu";
 import { useStyles } from "./styles";
 
@@ -33,6 +34,7 @@ export default function PersistentDrawerLeft({ children }) {
   return (
     <div className={classes.root}>
       <AppBar
+        style={{ backgroundColor: "#1ED760" }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -77,10 +79,12 @@ export default function PersistentDrawerLeft({ children }) {
         <Divider className={classes.divider} />
         <List style={{ color: "aliceblue" }}>
           {MENU.map((item, index) => (
-            <ListItem button key={item.title}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItem>
+            <Link to={item.path} className={classes.link}>
+              <ListItem button key={item.title}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.title} />
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>

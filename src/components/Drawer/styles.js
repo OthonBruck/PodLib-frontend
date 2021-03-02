@@ -66,4 +66,8 @@ export const useStyles = makeStyles((theme) => ({
   divider: {
     backgroundColor: "white",
   },
+  link: {
+    textDecoration: "none",
+    color: "aliceblue",
+  },
 }));

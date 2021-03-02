@@ -1,15 +1,16 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 import Drawer from "./components/Drawer/index";
-import Pesquisa from "./components/Pesquisa";
-import PodcastCard from "./components/PodcastCard/index";
-import PodcastWrapper from "./components/PodcastWrapper/index";
 
 function App() {
   return (
-    <div className="App">
-      <Drawer>
-        <PodcastWrapper lista={null} />
-      </Drawer>
+    <div>
+      <BrowserRouter>
+        <Drawer>
+          <AppRoutes />
+        </Drawer>
+      </BrowserRouter>
     </div>
   );
 }

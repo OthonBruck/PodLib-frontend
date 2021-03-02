@@ -1,14 +1,16 @@
-import { IconButton } from "@material-ui/core";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import ROUTES_NAME from "./routes-name";
+import HomeIcon from "@material-ui/icons/Home";
 
 const MENU = [
   {
-    title: "Inbox",
-    icon: <CloudUploadIcon />,
+    path: ROUTES_NAME.HOME,
+    icon: <HomeIcon />,
+    title: "Página Inicial",
   },
   {
-    title: "Email",
-    icon: <IconButton />,
+    path: ROUTES_NAME.Pesquisa,
+    icon: <HomeIcon />,
+    title: "Pesquisa",
   },
 ];
 

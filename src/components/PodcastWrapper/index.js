@@ -9,8 +9,6 @@ import { useStyles } from "./styles";
 export default function CardWrapper({ lista }) {
   const classes = useStyles();
 
-  const resto = lista && lista.length % 4;
-
   return (
     <Fragment>
       <ul className={classes.lista}>
@@ -18,7 +16,7 @@ export default function CardWrapper({ lista }) {
           lista.map((result) => {
             return (
               <div className={classes.items}>
-                <PodcastCard />
+                <PodcastCard data={result} />
               </div>
             );
           })}
