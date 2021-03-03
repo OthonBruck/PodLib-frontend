@@ -7,14 +7,14 @@ import PodcastWrapper from "../../components/PodcastWrapper/index";
 export default function Home() {
   const [cast, setCast] = useState([]);
 
-  const fetchCast = useCallback(async () => {
-    const response = await api.get(endpoints.buscarPodcast("search=nerd"));
-    setCast(response.data);
-  }, []);
+  // const fetchCast = useCallback(async () => {
+  //   const response = await api.get(endpoints.buscarPodcast("search=nerd"));
+  //   setCast(response.data);
+  // }, []);
 
-  useEffect(() => {
-    fetchCast();
-  }, [fetchCast]);
+  // useEffect(() => {
+  //   fetchCast();
+  // }, [fetchCast]);
 
   return (
     <div>

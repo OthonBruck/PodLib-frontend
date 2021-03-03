@@ -6,7 +6,12 @@ export default function PodcastCard({ data }) {
     <div>
       <Fragment>
         <Card
-          style={{ width: "300px", backgroundColor: "#282828", color: "white" }}
+          style={{
+            width: "300px",
+            height: "400px",
+            backgroundColor: "#282828",
+            color: "white",
+          }}
         >
           <CardContent>
             <Typography>PODCAST</Typography>
@@ -16,7 +21,7 @@ export default function PodcastCard({ data }) {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <img src={data.img}></img>
+              <img width={270} height={250} src={data.img} />
             </Grid>
           </CardContent>
         </Card>
