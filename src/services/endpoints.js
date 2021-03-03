@@ -3,4 +3,6 @@ export const endpoints = {
 
   buscarPodcast: (query) => `searchpodcast?${query}`,
   getAllPodcast: `podcast`,
+  deletePodcast: (id) => `podcast/${id}`,
+  changePodcast: (idPod, epi) => `podcast/${idPod}/${epi}`,
 };

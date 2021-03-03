@@ -5,12 +5,12 @@ const MENU = [
   {
     path: ROUTES_NAME.HOME,
     icon: <HomeIcon />,
-    title: "Página Inicial",
+    title: "Home",
   },
   {
-    path: ROUTES_NAME.Pesquisa,
+    path: ROUTES_NAME.FAVORITOS,
     icon: <HomeIcon />,
-    title: "Pesquisa",
+    title: "Favoritos",
   },
 ];
 

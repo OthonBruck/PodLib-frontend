@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   divider: {
-    backgroundColor: "white",
+    backgroundColor: "#1ED760",
   },
   link: {
     textDecoration: "none",

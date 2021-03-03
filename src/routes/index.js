@@ -6,6 +6,11 @@ const ROUTES = [
     exact: true,
     component: require("../pages/Home").default,
   },
+  {
+    path: ROUTES_NAME.FAVORITOS,
+    exact: true,
+    component: require("../pages/Favoritos").default,
+  },
 ];
 
 export default ROUTES;
