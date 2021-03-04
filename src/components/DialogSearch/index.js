@@ -12,19 +12,19 @@ import { endpoints } from "../../services/endpoints";
 import PodcastWrapper from "../../components/PodcastWrapper/index";
 import useStyles from "./styles";
 
-export default function AlertDialog() {
+export default function DialogSearch() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [cast, setCast] = useState([]);
 
-  const fetchCast = useCallback(async () => {
-    const response = await api.get(endpoints.buscarPodcast("search=nerd"));
-    setCast(response.data);
-  }, []);
+  // const fetchCast = useCallback(async () => {
+  //   const response = await api.get(endpoints.buscarPodcast("search=nerd"));
+  //   setCast(response.data);
+  // }, []);
 
-  useEffect(() => {
-    fetchCast();
-  }, [fetchCast]);
+  // useEffect(() => {
+  //   fetchCast();
+  // }, [fetchCast]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -52,7 +52,20 @@ export default function AlertDialog() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary" autoFocus>
+          <Button
+            onClick={handleClose}
+            variant="contained"
+            style={{
+              color: "black",
+              background: "aliceblue",
+              fontSize: 14,
+              fontWeight: "bold",
+              border: "1px black solid",
+              "&:hover": {
+                background: "grey",
+              },
+            }}
+          >
             Cancelar
           </Button>
         </DialogActions>

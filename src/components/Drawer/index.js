@@ -79,7 +79,7 @@ export default function PersistentDrawerLeft({ children }) {
         <Divider className={classes.divider} />
         <List style={{ color: "aliceblue" }}>
           {MENU.map((item, index) => (
-            <Link to={item.path} className={classes.link}>
+            <Link to={item.path} className={classes.link} key={index}>
               <ListItem button key={item.title}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.title} />

@@ -6,21 +6,19 @@ import { useStyles } from "./styles";
 
 //#endregion
 
-export default function CardWrapper({ lista }) {
+export default function PodcastWrapper({ lista }) {
   const classes = useStyles();
 
   return (
-    <Fragment>
-      <ul className={classes.lista}>
-        {lista &&
-          lista.map((result) => {
-            return (
-              <div className={classes.items}>
-                <PodcastCard data={result} />
-              </div>
-            );
-          })}
-      </ul>
-    </Fragment>
+    <ul className={classes.lista}>
+      {lista &&
+        lista.map((result, index) => {
+          return (
+            <div className={classes.items} key={index}>
+              <PodcastCard data={result} />
+            </div>
+          );
+        })}
+    </ul>
   );
 }

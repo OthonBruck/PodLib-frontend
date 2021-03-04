@@ -5,13 +5,11 @@ import Drawer from "./components/Drawer/index";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Drawer>
-          <AppRoutes />
-        </Drawer>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Drawer>
+        <AppRoutes />
+      </Drawer>
+    </BrowserRouter>
   );
 }
 
