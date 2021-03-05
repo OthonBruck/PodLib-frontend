@@ -23,5 +23,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  box: {
+    border: "2px solid white",
+    width: "100%",
+    marginTop: 4,
+  },
 }));
 export default useStyles;

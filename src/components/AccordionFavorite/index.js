@@ -8,7 +8,9 @@ import useStyles from "./styles";
 import api from "../../services/api";
 import { endpoints } from "../../services/endpoints";
 import { Box, Divider, Grid } from "@material-ui/core";
-import { AddBoxRounded } from "@material-ui/icons";
+import { AddBoxRounded, Delete } from "@material-ui/icons";
+import { Rating } from "@material-ui/lab";
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
 export default function AccordionFavorite() {
   const classes = useStyles();
@@ -42,16 +44,21 @@ export default function AccordionFavorite() {
                   </Typography>
                 </div>
                 <div className={classes.divBotoes}>
-                  <Typography>i</Typography>
+                  <DeleteForeverIcon onClick={() => console.log("oi")} />
                 </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Box>
+                <Box style={{ width: "100%" }}>
                   <Typography>{result.description}</Typography>
                   {result.episodes.map((info) => (
-                    <Typography>
-                      {info.title}, {info.date}
-                    </Typography>
+                    <Box className={classes.box}>
+                      <Box style={{ margin: 3 }}>
+                        <Typography>
+                          {info.title}, {info.date}
+                        </Typography>
+                        <Rating style={{ color: "red" }} />
+                      </Box>
+                    </Box>
                   ))}
                 </Box>
               </AccordionDetails>
